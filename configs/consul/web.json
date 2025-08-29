@@ -1,0 +1,13 @@
+{
+  "service": {
+    "name": "web",
+    "port": 3000,
+    "checks": [
+      {
+        "http": "http://127.0.0.1:3000/health",
+        "interval": "10s",
+        "timeout": "2s"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+config:
+  target: "http://localhost:8080"
+  phases:
+    - duration: 300
+      arrivalRate: 8     # 8 rps por 5 minutos
+      name: "soak-5min"
+  defaults:
+    headers:
+      User-Agent: "Artillery-SOAK"
+scenarios:
+  - name: "GET / soak"
+    flow:
+      - get:
+          url: "/"
+          expect:
+            - statusCode: 200

@@ -1,0 +1,12 @@
+# Ignorar máquinas virtuales
+.vagrant/
+*.box
+
+# Archivos temporales
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Salidas de Artillery
+tests/artillery/*.json

@@ -1,0 +1,14 @@
+HTTP/1.0 503 Service Unavailable
+Cache-Control: no-cache
+Connection: close
+Content-Type: text/html
+
+<!doctype html>
+<html>
+<head><title>Servicio no disponible</title></head>
+<body style="font-family: Arial; text-align:center; padding:40px;">
+  <h1>Servicio temporalmente no disponible</h1>
+  <p>No hay instancias de <strong>web</strong> saludables en este momento.</p>
+  <p>Intenta de nuevo en unos segundos. (HAProxy & Consul)</p>
+</body>
+</html>

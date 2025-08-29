@@ -1,0 +1,15 @@
+config:
+  target: "http://localhost:8080"
+  phases:
+    - duration: 60
+      arrivalRate: 10   # 10 req/seg durante 1 minuto
+  defaults:
+    headers:
+      User-Agent: "Artillery-BASELINE"
+scenarios:
+  - name: "GET / baseline"
+    flow:
+      - get:
+          url: "/"
+          expect:
+            - statusCode: 200

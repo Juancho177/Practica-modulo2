@@ -1,0 +1,15 @@
+config:
+  target: "http://localhost:8080"
+  phases:
+    - duration: 30
+      arrivalRate: 2
+  defaults:
+    headers:
+      User-Agent: "Artillery-SMOKE"
+scenarios:
+  - name: "GET / smoke"
+    flow:
+      - get:
+          url: "/"
+          expect:
+            - statusCode: 200

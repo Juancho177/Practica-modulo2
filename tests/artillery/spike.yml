@@ -1,0 +1,22 @@
+config:
+  target: "http://localhost:8080"
+  phases:
+    - duration: 10
+      arrivalRate: 5
+      name: "pre-spike"
+    - duration: 20
+      arrivalRate: 80
+      name: "spike"
+    - duration: 20
+      arrivalRate: 10
+      name: "recovery"
+  defaults:
+    headers:
+      User-Agent: "Artillery-SPIKE"
+scenarios:
+  - name: "GET / spike"
+    flow:
+      - get:
+          url: "/"
+          expect:
+            - statusCode: 200

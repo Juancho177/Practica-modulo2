@@ -1,0 +1,15 @@
+config:
+  target: "http://localhost:8080"
+  phases:
+    - duration: 1        #segundos
+      arrivalRate: 100   #Solicitudes 
+  defaults:
+    headers:
+      User-Agent: "Artillery-BURST-100"
+scenarios:
+  - name: "Burst 100 rps"
+    flow:
+      - get:
+          url: "/"
+          expect:
+            - statusCode: 200
